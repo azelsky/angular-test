@@ -1,0 +1,36 @@
+.repository {
+  &__img {
+    img {
+      height: 100px;
+      border-radius: 50%;
+    }
+    width: 150px;
+  }
+
+  &__information {
+    display: flex;
+  }
+
+  &__element {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    font-weight: bold;
+  }
+}
+
+.favorite {
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    color: #ffa550;
+  }
+
+  &-selected {
+    color: orange;
+  }
+
+}

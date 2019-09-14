@@ -1,1 +1,8 @@
-<app-search-field (search)="onSearch($event)"></app-search-field>
+<div class="search-component">
+  <app-search-field (search)="onSearch($event)"></app-search-field>
+  <app-repository-list
+    *ngIf="repositories"
+    [repositories]="repositories"
+    [totalCount]="totalCount"
+  ></app-repository-list>
+</div>

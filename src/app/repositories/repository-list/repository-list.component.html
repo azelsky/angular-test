@@ -1,0 +1,10 @@
+<mat-card>
+  <h3 mat-subheader>Repositories</h3>
+  <ul class="repository-list">
+    <app-repository
+      *ngFor="let repository of repositories"
+      [repository]="repository"
+    ></app-repository>
+    <li *ngIf="totalCount === 0">Not found</li>
+  </ul>
+</mat-card>

@@ -7,10 +7,12 @@ import {SharedModule} from '../shared/shared.module';
 
 import {SearchComponent} from './search/search.component';
 import {SearchFieldComponent} from './search-field/search-field.component';
+import { RepositoryListComponent } from './repository-list/repository-list.component';
+import { RepositoryComponent } from './repository/repository.component';
 
 
 @NgModule({
-  declarations: [SearchComponent, SearchFieldComponent],
+  declarations: [SearchComponent, SearchFieldComponent, RepositoryListComponent, RepositoryComponent],
   imports: [
     CommonModule,
     SharedModule,

@@ -1,0 +1,24 @@
+<li>
+  <div class="repository__element">
+    <div class="repository__information">
+      <div class="repository__img">
+        <img [src]="repository.owner.avatar_url" >
+      </div>
+      <div>
+        <div><span class="repository__description">Name: </span>{{repository.name}}</div>
+        <div><span class="repository__description">Link: </span>{{repository.html_url}}</div>
+        <div><span class="repository__description">Description: </span>{{repository.description | slice:0:100 }}</div>
+        <div><span class="repository__description">Language: </span>{{repository.language}}</div>
+        <div><span class="repository__description">Rating: </span>{{repository.stargazers_count}}</div>
+      </div>
+    </div>
+    <div (click)="updateFavoriteStatus(repository)">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Add to favorites"
+        class="favorite"
+        [ngClass]="{'favorite-selected': repository.isFavorite}"
+      >stars</mat-icon>
+    </div>
+  </div>
+</li>
