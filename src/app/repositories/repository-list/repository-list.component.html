@@ -10,7 +10,7 @@
   </div>
   <ul class="repository-list">
     <app-repository
-      *ngFor="let repository of getFilteredRepositories()"
+      *ngFor="let repository of repositories | filterByLanguage:selectedLanguages"
       [repository]="repository"
     ></app-repository>
     <li *ngIf="totalCount === 0">Not found</li>

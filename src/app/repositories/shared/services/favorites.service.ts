@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {IRepository} from '../models/repository';
 import {Subject} from 'rxjs';
+import {SharedModule} from '../shared.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: SharedModule
 })
 export class FavoritesService {
   updateFavorites = new Subject();

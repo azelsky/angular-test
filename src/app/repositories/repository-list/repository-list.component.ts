@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges} from '@angular/core';
-import {IRepository} from '../../../models/repository';
+import {IRepository} from '../shared/models/repository';
 
 @Component({
   selector: 'app-repository-list',
@@ -22,16 +22,5 @@ export class RepositoryListComponent implements OnChanges {
   getUniqueLanguages(): void {
     const languages = this.repositories.map((repository: IRepository) => repository.language || this.notDefined);
     this.languageList = [...new Set(languages)];
-  }
-
-  getFilteredRepositories(): IRepository[] {
-    return this.repositories.filter((repository: IRepository) => {
-      const language = repository.language || this.notDefined;
-      if (!this.selectedLanguages.length) {
-        return true;
-      }
-
-      return this.selectedLanguages.includes(language);
-    });
   }
 }

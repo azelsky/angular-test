@@ -3,9 +3,10 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {domain} from './domain.config';
 import {ISearchResult} from '../models/repository';
+import {SharedModule} from '../shared.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: SharedModule
 })
 export class RepositoriesService {
   constructor(

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {IRepository} from '../../../models/repository';
-import {FavoritesService} from '../../../services/favorites.service';
+import {IRepository} from '../shared/models/repository';
+import {FavoritesService} from '../shared/services/favorites.service';
 
 @Component({
   selector: 'app-repository',
