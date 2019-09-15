@@ -1,14 +1,11 @@
 import {Injectable} from '@angular/core';
 import {IRepository} from '../models/repository';
-import {Subject} from 'rxjs';
 import {SharedModule} from '../shared.module';
 
 @Injectable({
   providedIn: SharedModule
 })
 export class FavoritesService {
-  updateFavorites = new Subject();
-  updateFavoritesListener  = this.updateFavorites.asObservable();
 
   constructor() {
   }
@@ -20,7 +17,6 @@ export class FavoritesService {
     } else {
       this.deleteFromFavorites(favorites, repository);
     }
-    this.updateFavorites.next();
   }
 
   getFavorites(): IRepository[] {

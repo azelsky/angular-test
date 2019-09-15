@@ -6,7 +6,10 @@
       </div>
       <div>
         <div><span class="repository__description">Name: </span>{{repository.name}}</div>
-        <div><span class="repository__description">Link: </span>{{repository.html_url}}</div>
+        <div>
+          <span class="repository__description">Link: </span>
+          <a [href]="repository.html_url" target="_blank">{{repository.html_url}}</a>
+        </div>
         <div><span class="repository__description">Description: </span>{{repository.description | slice:0:100 }}</div>
         <div><span class="repository__description">Language: </span>{{repository.language || 'Not defined'}}</div>
         <div><span class="repository__description">Rating: </span>{{repository.stargazers_count}}</div>

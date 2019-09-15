@@ -1,20 +1,24 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 
+import {MenuComponent} from './components/menu/menu.component';
+
 @NgModule({
-  declarations: [],
+  declarations: [MenuComponent],
   imports: [
     CommonModule,
     MatInputModule,
     MatIconModule,
     MatSelectModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     MatInputModule,
@@ -22,6 +26,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatIconModule,
     MatSelectModule,
     ReactiveFormsModule,
+    MenuComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule {}

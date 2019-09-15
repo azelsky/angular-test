@@ -11,10 +11,11 @@ import {SearchComponent} from './search/search.component';
 import {SearchFieldComponent} from './search-field/search-field.component';
 import { RepositoryListComponent } from './repository-list/repository-list.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 @NgModule({
-  declarations: [SearchComponent, SearchFieldComponent, RepositoryListComponent, RepositoryComponent],
+  declarations: [SearchComponent, SearchFieldComponent, RepositoryListComponent, RepositoryComponent, FavoritesComponent],
   imports: [
     CommonModule,
     SharedModule,

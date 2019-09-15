@@ -1,0 +1,27 @@
+.menu {
+  padding-left: 5px;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+
+  &__element {
+    color: #000000;
+    transition: 0.5s;
+    &-active {
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    }
+  }
+}
+
+a {
+  &:visited {
+    color: #000000;
+  }
+  padding: 10px;
+  text-decoration: none;
+}
