@@ -1,8 +1,16 @@
 <mat-card>
-  <h3 mat-subheader>Repositories</h3>
+  <div class="header">
+    <h3 mat-subheader>Repositories</h3>
+    <mat-form-field>
+      <mat-label>Filter by languages</mat-label>
+      <mat-select multiple [(ngModel)]="selectedLanguages" [disabled]="!languageList.length">
+        <mat-option *ngFor="let language of languageList" [value]="language">{{language}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <ul class="repository-list">
     <app-repository
-      *ngFor="let repository of repositories"
+      *ngFor="let repository of getFilteredRepositories()"
       [repository]="repository"
     ></app-repository>
     <li *ngIf="totalCount === 0">Not found</li>

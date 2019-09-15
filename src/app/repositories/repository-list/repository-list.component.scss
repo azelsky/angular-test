@@ -6,3 +6,8 @@ mat-card {
   list-style: none;
   padding: 0;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
