@@ -1,10 +1,10 @@
 import {Component, OnDestroy} from '@angular/core';
 import {Subscription} from 'rxjs';
 
-import {RepositoriesService} from '../../services/repositories.service';
+import {RepositoriesService} from '../../../services/repositories.service';
 
-import {IRepository, ISearchResult} from '../../models/repository';
-import {FavoritesService} from '../../services/favorites.service';
+import {IRepository, ISearchResult} from '../../../models/repository';
+import {FavoritesService} from '../../../services/favorites.service';
 
 @Component({
   selector: 'app-search',

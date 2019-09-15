@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges} from '@angular/core';
-import {IRepository} from '../../models/repository';
+import {IRepository} from '../../../models/repository';
 
 @Component({
   selector: 'app-repository-list',

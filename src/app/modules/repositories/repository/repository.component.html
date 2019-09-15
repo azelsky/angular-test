@@ -12,12 +12,12 @@
         <div><span class="repository__description">Rating: </span>{{repository.stargazers_count}}</div>
       </div>
     </div>
-    <div (click)="updateFavoriteStatus(repository)">
-      <mat-icon
-        aria-hidden="false"
-        aria-label="Add to favorites"
-        class="favorite"
-        [ngClass]="{'favorite-selected': repository.isFavorite}"
+    <div
+      (click)="updateFavoriteStatus(repository)"
+      class="favorite"
+      [ngClass]="{'favorite-selected': repository.isFavorite}"
+    >
+      <mat-icon aria-hidden="false" aria-label="Add to favorites"
       >stars</mat-icon>
     </div>
   </div>
