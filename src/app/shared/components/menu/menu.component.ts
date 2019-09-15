@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
   menu = [
     {name: 'Search Repositories', link: '/search'},
-    {name: 'Favorites Repositories', link: '/favorites'},
+    {name: 'Favorite Repositories', link: '/favorites'},
   ];
 
   constructor() { }
